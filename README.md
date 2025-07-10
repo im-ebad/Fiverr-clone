@@ -232,8 +232,8 @@ e.g. Cloudinary preset name from your cloudinary dashboard settings -> Uploads
 
 ### Let's connect 🤝 <br />
 
-[![linkedin](https://img.shields.io/badge/Zuhed_Shaikh-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mdebad/)
-[![GitHub](https://img.shields.io/badge/Zuhed_Shaikh-20232A?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/im-ebad)
+[![linkedin](https://img.shields.io/badge/Md_Ebad-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mdebad/)
+[![GitHub](https://img.shields.io/badge/Md_Ebad-20232A?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/im-ebad)
 
 ## Show your support
 
