@@ -13,7 +13,7 @@ const authRegister = async (request, response) => {
     phone,
     password,
     image,
-    country,
+    //    country,
     isSeller,
     description,
   } = request.body;
@@ -35,7 +35,7 @@ const authRegister = async (request, response) => {
       email,
       password: hash,
       image,
-      country,
+      // country,
       description,
       isSeller,
       phone,
@@ -151,4 +151,3 @@ module.exports = {
   authRegister,
   authStatus,
 };
-
