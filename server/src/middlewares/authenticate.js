@@ -25,4 +25,3 @@ const authenticate = (request, response, next) => {
 };
 
 module.exports = authenticate;
-

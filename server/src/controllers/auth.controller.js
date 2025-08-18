@@ -7,29 +7,15 @@ const { JWT_SECRET, NODE_ENV } = process.env;
 const saltRounds = 10;
 
 const authRegister = async (request, response) => {
-  const {
-    username,
-    email,
-    phone,
-    password,
-    image,
-    //    country,
-    isSeller,
-    description,
-  } = request.body;
-  const list =
-    request.headers["x-forwarded-for"] || request.socket.remoteAddress;
-  const ips = list.split(",");
+  const { username, email, phone, password, image, isSeller, description } =
+    request.body;
+  // const list =
+  //   request.headers["x-forwarded-for"] || request.socket.remoteAddress;
+  // const ips = list.split(",");
 
   try {
     const hash = bcrypt.hashSync(password, saltRounds);
-    // const country = await new Promise((resolve, reject) => {
-    //   satelize.satelize({ ip: ips[0] }, (error, payload) => {
-    //     if (error) reject(error);
-    //     else resolve(payload.country);
-    //   });
-    // });
-    //
+
     const user = new User({
       username,
       email,
@@ -67,7 +53,7 @@ const authLogin = async (request, response) => {
   try {
     const user = await User.findOne({ username });
     if (!user) {
-      throw CustomException("Check username or password!", 404);
+      throw CustomException("User not found!", 404);
     }
 
     const match = bcrypt.compareSync(password, user.password);
@@ -116,6 +102,7 @@ const authLogout = async (request, response) => {
       sameSite: "none",
       secure: true,
     })
+    .status(200)
     .send({
       error: false,
       message: "User have been logged out!",

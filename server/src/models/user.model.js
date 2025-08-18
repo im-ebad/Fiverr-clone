@@ -31,7 +31,7 @@ const userSchema = new mongoose.Schema(
     },
     description: {
       type: String,
-      required: true,
+      required: false,
     },
     isSeller: {
       type: Boolean,
@@ -46,4 +46,3 @@ const userSchema = new mongoose.Schema(
 );
 
 module.exports = mongoose.model("User", userSchema);
-

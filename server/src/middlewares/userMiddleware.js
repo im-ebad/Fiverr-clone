@@ -29,4 +29,3 @@ const userMiddleware = (request, response, next) => {
 };
 
 module.exports = userMiddleware;
-
